@@ -44,8 +44,9 @@ function verificarChute(){
     cont++;
     let chute = document.querySelector('input').value;
     if(chute == numeroSecreto){
+        let tentativas = cont == 1? 'tentativa':'tantativas';
         alterarTitulo('h1','Acertou!!');
-        alterarTitulo('p',`Você Descobriu o Número Secreto em ${cont} tentativas!`);
+        alterarTitulo('p',`Você Descobriu o Número Secreto em ${cont} ${tentativas}!`);
         document.getElementById('reiniciar').removeAttribute('disabled');
     }else{
         if(numeroSecreto < chute){
